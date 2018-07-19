@@ -22,7 +22,7 @@ public class CustomerController {
 
     @RequestMapping("/customers")
     public List<Customer> findCustomers(@RequestParam List<Integer> idList) {
-        return customerRepository.findByIdIn(idList);
+        return customerRepository.find(idList);
     }
 
 }
